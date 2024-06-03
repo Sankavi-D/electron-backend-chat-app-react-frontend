@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Chat App</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Electron App</title>
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #status-button {
+      width: 200px;
+      height: 50px;
+      font-size: 20px;
+      color: white;
+      background-color: red;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
-  <div id="chat-container">
-    <div id="chat-window"></div>
-    <div id="input-container">
-      <input type="text" id="message-input" placeholder="Type your message...">
-      <button id="send-button">Send</button>
-    </div>
-  </div>
-  <div id="users-container">
-    <h3>Connected Users</h3>
-    <div id="users-list"></div>
-  </div>
-  <script src="../resources/socket.io.js"></script>
-  <script src="renderer.js"></script>
+  <button id="status-button">Not Activated</button>
+  <script src="./preload.js"></script>
 </body>
 </html>
